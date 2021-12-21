@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p:hover{
   font-weight: 700;
   font-size: .9rem;
   letter-spacing: .1rem;
-  background: rgb(1, 21, 59) !important;
+  background: rgb(4, 11, 59) !important;
 }
 .navbar-brand span{
   text-shadow: .55rem .55rem .8rem black !important;
