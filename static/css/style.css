@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* BODY SECTION */
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+video::-internal-media-controls-overlay-cast-button {
+    display: none;
+}
+body{
+  overflow-x: hidden;
+  font-family: 'Vollkorn', serif;
+  color: #505962;
+}
+
+h1, h2, h3, h4, h5, h6, p:hover{
+  cursor: default;
+}
+.offset:before{
+  display: block;
+  content: "";
+  height: 4rem;
+  margin-top: -4rem !important;
+}
+
+
+
+/* ******************************************************************************************* */
+
+
+
+#Contacto.offset:before {
+    display: block;
+    content: "";
+    height: 0rem !important;
+    margin-top: -4rem !important;
+}
+
+/* NAVIGATION BAR */
+.navbar{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgb(8,20,58) !important;
+}
+.navbar-brand span{
+  text-shadow: .55rem .55rem .8rem black !important;
+}
+.navbar-brand img{
+  height: 3.1rem !important;
+
+}
+.navbar #title{
+  font-size: 1.2rem !important;
+}
+.navbar-brand li{
+  padding-right: .7rem;
+}
+.navbar-nav li a{
+  position: relative !important;
+  text-shadow: .55rem .55rem .8rem black !important;
+}
+.navbar-nav li a::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.15rem;
+  left: 0;
+  bottom: 0;
+  color:  rgb(194, 194, 194);
+  background:  rgb(194, 194, 194);
+  transform-origin: left;
+  transition: all 0.8s;
+  transform: scaleX(0);
+}
+.navbar-nav li a:hover::after{
+  transform: scaleX(1);
+  color:  rgb(194, 194, 194) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color: white !important;
+  padding-top: .8rem !important;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: rgb(194, 194, 194) !important;
+}
+.navbar-toggler:focus{
+  outline: none;
+}
+
+/* PROMO SECTION */
+#picPromo{
+  padding: 0rem 1rem 1rem 1rem !important;
+}
+#picPromo .imgPromo{
+  width: 550px !important;
+  border-radius: 10% !important;
+  margin-bottom: 20px;
+}
+
+
+/* LANDING PAGE */
+
+
+.caption{
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%;
+  z-index: 1;
+  color: white;
+  text-transform: uppercase;
+}
+.caption h1{
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  text-shadow: .35rem .35rem .8rem black;
+  padding-bottom: 0rem;
+  opacity: 0;
+  animation: scale .5s forwards;
+}
+.caption h3{
+  font-size: 2rem;
+  text-shadow: .35rem .35rem .8rem black;
+  opacity: 0;
+  animation: fadeLeft 1s forwards;
+}
+.separator{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1.3rem;
+}
+.line{
+  width: 100%;
+  max-width: 8.4rem;
+  height: .18rem;
+  background-color: #fff;
+  position: relative;
+  opacity: 0;
+  animation: grow 2s forwards;
+}
+.line-right::before, .line-left::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: .6rem solid transparent;
+  opacity: 0;
+  animation: grow .5s forwards;
+}
+.line-right::before{
+  border-right-color: #fff;
+  right: 0;
+}
+.line-left::before{
+  border-left-color: #fff;
+  left: 0;
+}
+.anchor{
+  font-size: 1.8rem;
+  color: var(--secondary-font-color);
+  margin: 0 .9rem;
+  opacity: 0;
+  animation: spin .5s forwards;
+  animation-delay: 1.3s;
+}
+
+
+#homeBtn{
+  opacity: 0;
+  animation: fadeDown .7s forwards;
+  animation-delay: 1.5s;
+}
+
+.btn-lg{
+  font-size: 1.1rem !important;
+  border-width: medium !important;
+  border-radius: 50;
+  text-transform: uppercase;
+  padding: .6rem 1.2rem !important;
+  margin: 0 auto !important;
+  color: white;
+  background-color: #021b4b !important;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+  border-color: #021b4b !important;
+  transition: all 0.5s;
+}
+.btn-lg:hover{
+  background-color: #052e79 !important;
+  border-color: #052e79 !important;
+  transform: scale(1.08);
+  color: white;
+}
+
+/* COURSE SECTION */
+.christmas{
+  z-index: -1;
+}
+.narrow{
+  width: 75%;
+  margin: 1.5rem auto;
+  padding-top: 0rem;
+}
+.narrow h1{
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-top: 1.4rem !important;
+}
+#promo-underline .heading-underline{
+  background-color: #021b4b !important;
+  color:  #021b4b !important;
+}
+.btn-secondary{
+  font-size: 1.1rem !important;
+  border-width: medium !important;
+  border-radius: 50;
+  text-transform: uppercase;
+  padding: .6rem 1.2rem !important;
+  margin: 0 auto !important;
+  color: white;
+  background-color: #021b4b !important;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+  border-color: #021b4b !important;
+  transition: all 0.5s;
+}
+.btn-secondary:hover{
+  background-color: #052e79 !important;
+  border-color: #052e79 !important;
+  transform: scale(1.08);
+}
+
+/* FEATURES SECTION */
+.jumbotron{
+  margin-bottom: 0;
+  padding: 1.5rem 0 3.5rem;
+}
+h3.heading{
+  color:rgb(8, 48, 122);
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.heading-underline{
+  width: 5.5rem !important;
+  height: .27rem !important;
+  background-color: rgb(161, 161, 161) !important;
+  margin: 0 auto 0rem !important;
+}
+.feature{
+  padding: 0.5rem 0 1rem 0 !important;
+}
+.feature i{
+  text-shadow: .55rem .55rem .8rem black !important;
+}
+.feature svg.svg-inline--fa{
+  color:  rgb(8, 48, 122) !important;
+  font-size: 5rem !important;
+}
+.feature img{
+  width: 100%;
+  border-radius: 50%;
+  padding: 1.2rem !important;
+}
+.feature video{
+  width: 100%;
+  border-radius: 35%;
+  padding: 1.2rem !important;
+}
+.feature h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(39, 39, 39);
+}
+.feature p{
+  font-size: 1.1rem;
+}
+
+/* SERVICIOS SECTION */
+h3.heading-servicios{
+  color:rgb(255, 255, 255);
+  font-size: 1.9rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+#carouselExampleIndicators .item{
+  height: 100px;
+}
+
+.basicosText{
+  font-size: 24px;
+  color: rgb(237, 237, 237);
+  font-weight: 500;
+  margin: auto auto;
+}
+
+/* UBICACION */
+.ubicacionText{
+  font-size: 24px;
+  color: rgb(43, 43, 43);
+  font-weight: 500;
+  text-align: center;
+}
+
+.ubicacion img{
+  width: 100%;
+  border-radius: 15%;
+  box-shadow: 0.15rem .15rem 0.90rem black !important;
+}
+
+/* RESOURCES SECTION */
+.fixed{
+  z-index: -1;
+}
+#resources-h3{
+  color: white;
+  margin-bottom: 0.6rem !important;
+  text-shadow: .35rem .35rem .8rem black !important;
+}
+#resources-underline{
+  background-color: rgb(11, 55, 136) !important;
+  margin-bottom: 2rem !important;
+  width: 14rem !important;
+  height: .28rem !important;
+}
+.dark{
+  background-color: rgba(36, 36, 36, 0.75);
+  color: white;
+  padding: 7rem 2rem;
+}
+.fixed-background h3{
+  margin-bottom: 2rem;
+  text-shadow: .35rem .35rem .8rem black !important;
+}
+.fixed-background p{
+  margin-top: 1.5rem;
+}
+.resources-icons{
+  transition: all 1s;
+}
+.resources-icons:hover{
+  transform: rotate(360deg);
+  color: rgb(9, 54, 136) !important;
+}
+
+
+/* CLIENTS SECTION */
+.clients img{
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0.15rem .15rem 0.90rem black !important;
+}
+blockquote .svg-inline--fa{
+  color: rgb(8, 48, 122) !important;
+  margin: 0.8rem;
+}
+.clients-hr{
+  border-top: .05rem solid  rgb(1, 21, 59);
+}
+
+/* CONTACT SECTION */
+footer{
+  /* background-color:rgb(5, 25, 63); */
+  background-color:rgb(1, 21, 59);
+  color: white;
+  padding: 2rem 0 2rem;
+  margin-top: 1rem;
+}
+#ImgFooter{
+  height: 4rem !important;
+}
+#brand-footer{
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: .35rem .35rem .8rem black !important;
+}
+#brand-footer:hover{
+  text-decoration: none;
+}
+footer p{
+  margin-bottom: 0.5rem !important;
+}
+footer a{
+  color: white;
+  text-decoration: none;
+}
+#officeGPS:hover{
+  text-decoration: none;
+  text-underline: none;
+  color: white;
+}
+footer svg.svg-inline--fa{
+  font-size: 1.6rem;
+  margin: 0rem .5rem 0 0;
+  text-shadow: .35rem .35rem .8rem black !important;
+  transition: all 1s;
+}
+footer .svg-inline--fa:hover{
+  transform: rotate(360deg);
+  color: rgb(194, 194, 194);
+
+}
+footer .developer-info{
+  height: fit-content !important;
+}
+footer .developer-info a{
+  text-decoration: none;
+  color: white;
+}
+footer .developer-info a:hover{
+  cursor: pointer;
+}
+hr.socket{
+  width: 100%;
+  border-top: .15rem solid white;
+  margin-top: 1.7rem;
+}
+
+.carousel{
+  width: 97%;
+  border-radius: 50px 50px 50px 50px;
+  overflow: hidden;
+  margin: auto auto;
+}
+.carousel-caption h5{
+  margin-bottom: 50px !important;
+}
+
+#equipamiento .heading-servicios{
+  color: rgb(8, 48, 122) !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 1420px){
+  .navbar-expand-custom {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+      flex-direction: row;
+  }
+  .navbar-expand-custom .dropdown-menu {
+      position: absolute;
+  }
+  .navbar-expand-custom .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+  }
+  .navbar-expand-custom > .container {
+      flex-wrap: nowrap;
+  }
+  .navbar-expand-custom .navbar-collapse {
+      display: flex!important;
+      flex-basis: auto;
+  }
+  .navbar-expand-custom .navbar-toggler {
+      display: none;
+  }
+}
+@media (max-width: 1720px) {
+  .nav-link{
+    font-size: 0.75rem !important;
+  }
+}
+@media (max-width: 867px){
+  .navbar-brand{
+    width: max-content;
+  }
+  .caption h1{
+    font-size: 2rem;
+    letter-spacing: .15rem;
+    padding-bottom: .5rem;
+  }
+  .caption h3{
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .btn-lg{
+    padding: .5rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  .clients img{
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  /* PROMO SECTION */
+  #picPromo .imgPromo{
+    max-width: 100% !important;
+    border-radius: 20%;
+  }
+  #titlePromo{
+    margin: 0 auto !important;
+    margin-top: 0 !important;
+  }
+  #picPromo{
+    margin: 4px auto;
+  }
+  /* BUTTONS */
+  .btn-secondary{
+    width: 100%;
+    padding: .6rem 1rem !important;
+  }
+
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+
+}
+@media (max-width: 600px){
+  .navbar-brand #urubo-brand{
+    display: none;
+  }
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 1400px) {
+  .navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 365px){
+  .navbar-brand{
+    width: min-content;
+    margin-right: 0 !important;
+  }
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 355px){
+  .navbar-brand #puertomadero-brand{
+    font-size: 18px !important;
+  }
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 1480px){
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 1200px){
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 1350px){
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+@media (max-width: 390px){
+  /* UBICACION */
+  .ubicacionText{
+    font-size: 16px;
+    color: rgb(43, 43, 43);
+    font-weight: 500;
+  }
+
+  /* Basicos y Lujo Text */
+  .basicosText{
+    font-size: 16px;
+    color: rgb(237, 237, 237);
+    font-weight: 500;
+    margin: auto auto;
+  }
+  #promocion h1{
+    font-size: 1.2rem !important;
+  }
+  .btn-secondary{
+    font-size: 0.9rem !important;
+  }
+  .carousel{
+    width: 100%;
+    border-radius: 50px 50px 50px 50px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+}
+
+/* Animations */
+@keyframes fadeLeft{
+  20%{
+    transform: translateX(10rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes scale{
+  0%{
+    transform: scale(2);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes grow{
+  0%{
+    width: 0;
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes fadeDown{
+  0%{
+    transform: translateY(-2rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+/* Promo Section Animations */
+@keyframes fadeImgPrLeft{
+  0%{
+    transform: translateX(30rem);
+  }
+  80%{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+=============*/
