@@ -11,6 +11,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script type="text/javascript"> function loadScript(t,e){var a=document.createElement("script");a.type="text/javascript",a.readyState?a.onreadystatechange=function(){"loaded"!=a.readyState&&"complete"!=a.readyState||(a.onreadystatechange=null,e())}:a.onload=function(){e()},a.src=t,document.getElementsByTagName("head")[0].appendChild(a)}loadScript("https://contactweb.contactvox.com/js/3.0/webcontact.floating-menu.min.js?e7bba2931624d8d4a14e7ccbc1d255ea",function(){}); </script>
+		<!-- AOS CSS CDN -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- AOS JS CDN -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	</head>
 	<body data-spy="scroll" data-target="#navbarResponsive">
 		
@@ -75,11 +79,11 @@
 				<div id="Promoción" class="offset">
 					<div class="fixed-background">
 						<div class="row">
-							<div id="titlePromo" class="col-12 narrow text-center">
+							<div data-aos="fade-left" id="titlePromo" class="col-12 narrow text-center">
 								<h1 style="color: white !important; text-shadow: .55rem .55rem .8rem black;" class="promoTitle">Promoción al Contado</h1>
 								<div style="color: #021b4b !important;" id="promo-underline" class="heading-underline"></div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6" data-aos="fade-right">
 								<div id="promoCont" class="carousel slide" data-ride="carousel">
 									<ol class="carousel-indicators">
 									  <li data-target="#promoCont" data-slide-to="0" class="active"></li>
@@ -107,7 +111,7 @@
 									</a>
 								  </div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6" data-aos="fade-left">
 								<div id="promoCont2" class="carousel slide" data-ride="carousel">
 									<ol class="carousel-indicators">
 									  <li data-target="#promoCont2" data-slide-to="0" class="active"></li>
@@ -131,7 +135,7 @@
 									</a>
 								  </div>
 							</div>
-							<div class="col-md-12 under-cont-col text-center">
+							<div class="col-md-12 under-cont-col text-center" data-aos="fade-right">
 								<img class="under-cont" src="./static/Sources/7reasons.jpeg" alt="7 Razones">
 							</div>
 						</div>
@@ -174,13 +178,13 @@
 		<div id="avancesPavimentacion" class="offset">
 			<div class="jumbotron bg-dark" style="background-color: rgb(32, 32, 32) !important;">
 				<div class="row text-center">
-					<div class="col-12">
+					<div class="col-12" data-aos="fade-left">
 						<h3 class="heading-servicios">Avances Pavimentación</h3>
 						<div id="pav-underline" class="heading-underline"></div>
 					</div>
 					<!-- Row Features -->
 					<div class="row text-center">
-						<div class="col-md-6" style="margin: auto; padding-top: 26px !important;">
+						<div class="col-md-6" style="margin: auto; padding-top: 26px !important;" data-aos="fade-right">
 							<div id="pavAvances" class="carousel slide" data-ride="carousel">
 								<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 								  <li data-target="#paviExampleIndicators" data-slide-to="0" class="active"></li>
@@ -224,7 +228,7 @@
 								</a>
 							  </div>
 						</div>
-						<div class="col-md-6" style="margin: auto;">
+						<div class="col-md-6" style="margin: auto;" data-aos="fade-left">
 							<div id="pavVideos" class="carousel slide" data-ride="carousel">
 								<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 								  <li data-target="#pavVideosExampleIndicators" data-slide-to="0" class="active"></li>
@@ -273,12 +277,12 @@
 		<div class="jumbotron" style="background-color: rgb(255, 255, 255) !important;">
 			<div class="row text-center">
 				<div class="col-12" id="equipamiento">
-					<h3 class="heading-servicios">Seguimos Avanzando hacia la meta!</h3>
+					<h3 class="heading-servicios" data-aos="fade-right">Seguimos Avanzando hacia la meta!</h3>
 					<div class="heading-underline"></div>
 				</div>
 				<!-- Row Features -->
 				<div class="row text-center">
-					<div class="col-md-6" style="margin: auto; padding-top: 26px !important;">
+					<div class="col-md-6" style="margin: auto; padding-top: 26px !important;" data-aos="fade-left">
 						<div id="avancesGeneral" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 							  <li data-target="#avancesGeneral" data-slide-to="0" class="active"></li>
@@ -306,7 +310,7 @@
 							</a>
 						  </div>
 					</div>
-					<div class="col-md-6" style="margin: auto; padding-top: 26px !important;">
+					<div class="col-md-6" style="margin: auto; padding-top: 26px !important;" data-aos="fade-right">
 						<div id="avancesMeta" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 							  <li data-target="#avancesMeta" data-slide-to="0" class="active"></li>
@@ -344,12 +348,12 @@
 				<div class="jumbotron bg-dark" style="background-color: rgb(32, 32, 32) !important;">
 					<div class="row text-center" id="caballerizaSec">
 						<div class="col-12">
-							<h3 class="heading-servicios">Avances Caballeriza</h3>
+							<h3 class="heading-servicios" data-aos="fade-left">Avances Caballeriza</h3>
 							<div class="heading-underline"></div>
 						</div>
 						<!-- Row Features -->
 						<div class="row text-center">
-							<div class="col-md-6" style="margin: auto; padding-top: 26px !important;">
+							<div class="col-md-6" style="margin: auto; padding-top: 26px !important;" data-aos="fade-right">
 								<div id="cabAvances" class="carousel slide" data-ride="carousel">
 									<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 									  <li data-target="#cabaExampleIndicators" data-slide-to="0" class="active"></li>
@@ -407,81 +411,81 @@
 			<div class="jumbotron">
 				<div class="narrow text-center">
 					<div class="col-12">
-						<h3 class="heading">Contará con</h3>
+						<h3 class="heading" data-aos="fade-left">Contará con</h3>
 						<div class="heading-underline"></div>
 					</div>
 					<!-- Row Features -->
 					<div id="features-row" class="row text-center" >
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/EcoResort.jpg">
+								<video data-aos="fade-right" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/EcoResort.jpg">
 									<source src="./static/Sources/Features/EcoResort.mp4" type="video/mp4">
 								</video>
-								<h3>Eco Resort</h3>
+								<h3 data-aos="fade-up">Eco Resort</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/polo.jpg">
+								<video data-aos="fade-left" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/polo.jpg">
 									<source src="./static/Sources/Features/polo.mp4" type="video/mp4">
 								</video>
-								<h3>Club de Polo</h3>
+								<h3 data-aos="fade-up">Club de Polo</h3>
 							</div>
 						</div> 
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/inmobiliarios.jpg">
+								<video data-aos="fade-right" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/inmobiliarios.jpg">
 									<source src="./static/Sources/Features/inmobiliarios.mp4" type="video/mp4">
 								</video>
-								<h3>Proyectos Inmobiliarios</h3>
+								<h3 data-aos="fade-up">Proyectos Inmobiliarios</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/ciclovias.jpg">
+								<video data-aos="fade-left" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/ciclovias.jpg">
 									<source src="./static/Sources/Features/ciclovias.mp4" type="video/mp4">
 								</video>
-								<h3>Ciclovías</h3>
+								<h3 data-aos="fade-up">Ciclovías</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/areasverdes.jpg">
+								<video data-aos="fade-right" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/areasverdes.jpg">
 										<source src="./static/Sources/Features/areasverdes.mp4" type="video/mp4">
 								</video>
-								<h3>Areas Verdes</h3>
+								<h3 data-aos="fade-up">Areas Verdes</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/asfaltado.jpg">
+								<video data-aos="fade-left" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/asfaltado.jpg">
 										<source src="./static/Sources/Features/asfaltado.mp4" type="video/mp4">
 								</video>
-								<h3>Asfaltado</h3>
+								<h3 data-aos="fade-up">Asfaltado</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/supermarket.jpg">
+								<video data-aos="fade-right" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/supermarket.jpg">
 									<source src="./static/Sources/Features/supermarket.mp4" type="video/mp4">
 								</video>
-								<h3>Supermercado</h3>
+								<h3 data-aos="fade-up">Supermercado</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/hospital.jpg">
+								<video data-aos="fade-left" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/hospital.jpg">
 										<source src="./static/Sources/Features/hospital.mp4" type="video/mp4">
 								</video>
-								<h3>Hospital</h3>
+								<h3 data-aos="fade-up">Hospital</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="feature">
-								<video autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/colegio.jpg">
+								<video data-aos="fade-right" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/colegio.jpg">
 										<source src="./static/Sources/Features/colegio.mp4" type="video/mp4">
 								</video>
-								<h3>Escuela</h3>
+								<h3 data-aos="fade-up">Escuela</h3>
 							</div>
 						</div>
 					</div>
@@ -495,12 +499,12 @@
 			<div class="jumbotron bg-dark" style="background-color: rgb(32, 32, 32) !important;">
 				<div class="row text-center">
 					<div class="col-12">
-						<h3 class="heading-servicios">Servicios de Lujo</h3>
+						<h3 data-aos="fade-left" class="heading-servicios">Servicios de Lujo</h3>
 						<div class="heading-underline"></div>
 					</div>
 					<!-- Row Features -->
 					<div class="row text-center">
-						<div class="col-md-7" style="margin: auto; padding-top: 26px !important;">
+						<div class="col-md-7" style="margin: auto; padding-top: 26px !important;" data-aos="fade-right">
 							<div id="lujoCarousel" class="carousel slide" data-ride="carousel">
 								<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 								  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -552,7 +556,7 @@
 							  </div>
 						</div>
 						<div class="col-md-5">
-							<p class="basicosText">Puerto Madero Urubó contará con los servicios de lujo de: Eco Resort, Club de Polo, Club Hípico, Áreas Verdes, Churrasqueras, Piscinas, Saunas! Puerto Madero Urubó también contará con Supermercado, Hospital y Escuela, ya que será una necesidad debido a que dentro de Puerto Madero Urubó vivirán más de 4500 familias!</p>
+							<p data-aos="zoom-in-up" class="basicosText">Puerto Madero Urubó contará con los servicios de lujo de: Eco Resort, Club de Polo, Club Hípico, Áreas Verdes, Churrasqueras, Piscinas, Saunas! Puerto Madero Urubó también contará con Supermercado, Hospital y Escuela, ya que será una necesidad debido a que dentro de Puerto Madero Urubó vivirán más de 4500 familias!</p>
 						</div>
 					</div>
 				</div>
@@ -564,21 +568,21 @@
 		<div id="ubicacion" class="offset">
 			<div class="jumbotron">
 				<div class="col-12 text-center" style="padding-bottom: 0px !important;">
-					<h3 class="heading">Ubicación</h3>
+					<h3 data-aos="fade-down" class="heading">Ubicación</h3>
 					<div class="heading-underline"></div>
 				</div>
 				<div class="row">
 					<div class="col-md-12 ubicacion">
 						<div class="row">
 							<div class="col-md-5">
-								<p class="ubicacionText">Puerto Madero Urubó queda ubicado en la zona de mayor desarrollo del Urubó, con la más alta plusvalía! Tenemos de urbanización vecinas a Puerto Esmeralda, Portones del Urubó, que son urbanizaciones con alto desarrollo y plusvalia! A tan solo 20-25 minutos del Puente del Urubó, excelente zona para invertir en tu futuro!</p>
+								<p data-aos="fade-left" class="ubicacionText">Puerto Madero Urubó queda ubicado en la zona de mayor desarrollo del Urubó, con la más alta plusvalía! Tenemos de urbanización vecinas a Puerto Esmeralda, Portones del Urubó, que son urbanizaciones con alto desarrollo y plusvalia! A tan solo 20-25 minutos del Puente del Urubó, excelente zona para invertir en tu futuro!</p>
 							</div>
-							<div class="col-md-7" style="padding: 16px 0px !important;">
+							<div class="col-md-7" data-aos="fade-right" style="padding: 16px 0px !important;">
 								<video style="width: 100%; border-radius: 12%;" autobuffer autoplay muted playsinline loop poster="./static/Sources/Features/EcoResort.jpg">
 									<source src="./static/Sources/ubicacionPM.mp4" type="video/mp4">
 								</video>
 							</div>
-							<a class="btn btn-lg btn-md" style="margin-top: 30px !important" href="#oficinasBol">¡Visita Nuestras Oficinas!</a>
+							<a data-aos="fade-up" class="btn btn-lg btn-md" style="margin-top: 30px !important" href="#oficinasBol">¡Visita Nuestras Oficinas!</a>
 						</div>
 					</div>
 				</div>
@@ -591,12 +595,12 @@
 			<div class="jumbotron bg-dark" style="background-color: rgb(32, 32, 32) !important;">
 				<div class="row text-center">
 					<div class="col-12">
-						<h3 class="heading-servicios">Servicios Básicos</h3>
+						<h3 data-aos="fade-right" class="heading-servicios">Servicios Básicos</h3>
 						<div class="heading-underline"></div>
 					</div>
 					<!-- Row Features -->
 					<div class="row text-center">
-						<div class="col-md-7" style="margin: auto; padding-top: 26px !important;">
+						<div class="col-md-7" style="margin: auto; padding-top: 26px !important;" data-aos="fade-left">
 							<div id="basicosCarousel" class="carousel slide" data-ride="carousel">
 								<ol class="carousel-indicators" style="margin: 0px 56px 8px !important;">
 								  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -635,7 +639,7 @@
 							  </div>
 						</div>
 						<div class="col-md-5">
-							<p class="basicosText">Puerto Madero Urubó contará con los servicios básicos de: Agua Potable, Luz Eléctrica, Fibra Óptica, Cableado Subterraneo, Limpieza, Seguridad las 24 horas, Portería, etc!</p>
+							<p data-aos="zoom-in-up" class="basicosText">Puerto Madero Urubó contará con los servicios básicos de: Agua Potable, Luz Eléctrica, Fibra Óptica, Cableado Subterraneo, Limpieza, Seguridad las 24 horas, Portería, etc!</p>
 						</div>
 					</div>
 				</div>
@@ -818,10 +822,14 @@
 					$(".navbar-collapse").collapse('hide');
 				}, 800);
 			});
-
-
-
-
+		</script>
+		<!-- Initialize AOS -->
+		<script>
+			AOS.init({
+				delay: 800,
+				duration: 1000,
+				offset: 120
+			});
 		</script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="./static/js/jquery-3.4.0.min.js"></script>
