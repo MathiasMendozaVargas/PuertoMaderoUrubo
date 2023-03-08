@@ -201,9 +201,10 @@ h1, h2, h3, h4, h5, h6, p:hover{
   color: white;
 }
 
-/* COURSE SECTION */
-.christmas{
-  z-index: -1;
+/* PROMO SECTION */
+.under-cont{
+  border-radius: 15px;
+  width: 70%;
 }
 .narrow{
   width: 75%;
@@ -530,6 +531,14 @@ hr.socket{
     border-radius: 50px 50px 50px 50px;
     overflow: hidden;
     margin: auto auto;
+  }
+  .under-cont-col{
+    padding: 0 !important;
+    margin-top: 30px;
+  }
+  .under-cont{
+    width: 100%;
+    border-radius: 0 !important;
   }
 }
 @media (max-width: 1400px) {
