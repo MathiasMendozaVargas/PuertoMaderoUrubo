@@ -1,0 +1,122 @@
+/* Navbar branding */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 2.5rem;
+    /* Adjust as needed */
+}
+
+.navbar-brand .text {
+    margin-left: 0.5rem;
+    /* Adjust as needed */
+    color: #ffffff;
+    /* White text color */
+    font-size: 1.25rem;
+    /* Adjust as needed */
+}
+
+/* Navbar links */
+.navbar-links {
+    display: none;
+    /* Hidden by default */
+}
+
+.navbar-links a {
+    display: block;
+    padding: 0.5rem 1rem;
+    /* Adjust padding as needed */
+    color: #ffffff;
+    /* White text color */
+    font-size: 0.875rem;
+    /* Adjust font size as needed */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Light background on hover */
+    color: #ffffff;
+    /* White text color on hover */
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    /* Initially hidden */
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: flex;
+        /* Display links in a row for smaller screens */
+        justify-content: center;
+    }
+
+    .navbar-links a {
+        padding: 0.5rem 0.75rem;
+        /* Adjust padding for smaller screens */
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        /* Show mobile menu button */
+    }
+}
+
+/* Navbar custom styles */
+.mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin: 4px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1a202c;
+    /* Adjust background color as needed */
+    z-index: 1000;
+}
+
+.mobile-menu.open {
+    display: block;
+    /* Show mobile menu when open */
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem;
+    color: #ffffff;
+    /* White text color */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: #2d3748;
+    /* Darker background on hover */
+}
