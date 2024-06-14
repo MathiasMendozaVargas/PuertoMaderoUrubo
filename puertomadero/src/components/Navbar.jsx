@@ -1,5 +1,5 @@
-// Navbar.jsx
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/Navbar.css'; // Importing custom CSS file
 
 const Navbar = () => {
@@ -126,59 +126,69 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`mobile-menu z-50 ${isOpen ? 'open' : ''}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#Promoción"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="mobile-menu z-40"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            Promoción
-          </a>
-          <a
-            href="#avancesPavimentacion"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
-          >
-            Pavimentación
-          </a>
-          <a
-            href="#avancesCaballeriza"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
-          >
-            Caballeriza
-          </a>
-          <a
-            href="#ContaráCon"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
-          >
-            Contará Con
-          </a>
-          <a
-            href="#Serviciosdelujo"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
-          >
-            Servicios de Lujo
-          </a>
-          <a
-            href="#ubicacion"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
-          >
-            Ubicación
-          </a>
-          <a
-            href="#Serviciosbasicos"
-            className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
-            onClick={toggleMenu}
-          >
-            Servicios Básicos
-          </a>
-        </div>
-      </div>
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <a
+                href="#Promoción"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Promoción
+              </a>
+              <a
+                href="#avancesPavimentacion"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Pavimentación
+              </a>
+              <a
+                href="#avancesCaballeriza"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Caballeriza
+              </a>
+              <a
+                href="#ContaráCon"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Contará Con
+              </a>
+              <a
+                href="#Serviciosdelujo"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Servicios de Lujo
+              </a>
+              <a
+                href="#ubicacion"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Ubicación
+              </a>
+              <a
+                href="#Serviciosbasicos"
+                className="block text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                onClick={toggleMenu}
+              >
+                Servicios Básicos
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

@@ -5,70 +5,55 @@
 }
 
 .navbar-brand img {
-    height: 2.5rem;
-    /* Adjust as needed */
+    height: 2.5rem; /* Adjust as needed */
 }
 
 .navbar-brand .text {
-    margin-left: 0.5rem;
-    /* Adjust as needed */
-    color: #ffffff;
-    /* White text color */
-    font-size: 1.25rem;
-    /* Adjust as needed */
+    margin-left: 0.5rem; /* Adjust as needed */
+    color: #ffffff; /* White text color */
+    font-size: 1.25rem; /* Adjust as needed */
 }
 
 /* Navbar links */
 .navbar-links {
-    display: none;
-    /* Hidden by default */
+    display: none; /* Hidden by default */
 }
 
 .navbar-links a {
     display: block;
-    padding: 0.5rem 1rem;
-    /* Adjust padding as needed */
-    color: #ffffff;
-    /* White text color */
-    font-size: 0.875rem;
-    /* Adjust font size as needed */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    color: #ffffff; /* White text color */
+    font-size: 0.875rem; /* Adjust font size as needed */
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar-links a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Light background on hover */
-    color: #ffffff;
-    /* White text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    color: #ffffff; /* White text color on hover */
 }
 
 /* Mobile menu button */
 .mobile-menu-btn {
-    display: none;
-    /* Initially hidden */
+    display: none; /* Initially hidden */
 }
 
 @media (max-width: 868px) {
     .navbar {
-        background-color: #1a202c;
-        /* Same background color as navbar */
+        background-color: #1a202c; /* Same background color as navbar */
     }
 
     .navbar-links {
-        display: flex;
-        /* Display links in a row for smaller screens */
+        display: flex; /* Display links in a row for smaller screens */
         justify-content: center;
     }
 
     .navbar-links a {
-        padding: 0.5rem 0.75rem;
-        /* Adjust padding for smaller screens */
+        padding: 0.5rem 0.75rem; /* Adjust padding for smaller screens */
     }
 
     .mobile-menu-btn {
-        display: block;
-        /* Show mobile menu button */
+        display: block; /* Show mobile menu button */
     }
 }
 
@@ -96,32 +81,19 @@
 
 /* Mobile Menu */
 .mobile-menu {
-    display: none;
-    /* Hidden by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #1a202c;
-    /* Same background color as navbar */
+    overflow: hidden; /* Ensure smooth height transition */
+    background-color: #1a202c; /* Same background color as navbar */
     z-index: 1000;
-}
-
-.mobile-menu.open {
-    display: block;
-    /* Show mobile menu when open */
 }
 
 .mobile-menu a {
     display: block;
     padding: 1rem;
-    color: #ffffff;
-    /* White text color */
+    color: #ffffff; /* White text color */
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .mobile-menu a:hover {
-    background-color: #2d3748;
-    /* Darker background on hover */
+    background-color: #2d3748; /* Darker background on hover */
 }

@@ -13,7 +13,7 @@ const HeroSection = () => {
           className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
           poster="./static/Sources/inicioHome.jpg"
         >
-          <source src="./static/Sources/animation1.mp4" type="video/mp4" />
+          <source src="/Sources/animation1.mp4" type="video/mp4" />
         </video>
       </div>
 
