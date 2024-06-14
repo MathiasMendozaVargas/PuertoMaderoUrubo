@@ -49,7 +49,7 @@
     /* Initially hidden */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     .navbar {
         background-color: #1a202c;
         /* Same background color as navbar */

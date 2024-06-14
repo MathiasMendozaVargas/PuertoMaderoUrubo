@@ -11,7 +11,7 @@ const Navbar = () => {
   // Close mobile menu when switching to larger screens
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 900) {
+      if (window.innerWidth >= 700) {
         setIsOpen(false);
       }
     };
@@ -44,7 +44,7 @@ const Navbar = () => {
           </div>
 
           {/* Navbar links */}
-          <div className="hidden sm:flex sm:items-center sm:ml-6">
+          <div className="hidden lg:flex sm:items-center sm:ml-6">
             <div className="flex space-x-4">
               <a
                 href="#Promoción"
@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="sm:hidden">
+          <div className="lg:hidden">
             <button
               className="mobile-menu-btn block text-gray-300 hover:text-white focus:outline-none"
               onClick={toggleMenu}
