@@ -1,3 +1,4 @@
+// Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css'; // Importing custom CSS file
 
@@ -21,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-gray-900 shadow-lg fixed w-full z-10">
+    <nav className="bg-gray-900 shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           {/* Navbar branding */}
@@ -125,7 +126,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
+      <div className={`mobile-menu z-50 ${isOpen ? 'open' : ''}`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
           <a
             href="#Promoción"
