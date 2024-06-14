@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .btn {
+        @apply inline-block px-4 py-2 border border-transparent rounded-md text-base font-medium shadow-sm;
+    }
+
+    .btn-lg {
+        @apply text-lg font-semibold;
+    }
+}

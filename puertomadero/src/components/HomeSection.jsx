@@ -1,39 +1,40 @@
+// HeroSection.jsx
 import React from 'react';
 
-const HomeSection = () => {
+const HeroSection = () => {
   return (
-    <div id="home" className="relative">
-      {/* Video banner */}
-      <div className="banner relative">
+    <div id="home" className="relative w-full h-screen overflow-hidden">
+      <div className="banner relative w-full h-full flex justify-center items-center">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
-          playsInline
           loop
-          poster="/Sources/inicioHome.jpg"
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+          poster="./static/Sources/inicioHome.jpg"
         >
-          <source src="/Sources/animation1.mp4" type="video/mp4" />
+          <source src="./static/Sources/animation1.mp4" type="video/mp4" />
         </video>
       </div>
 
-      {/* Caption */}
-      <div className="caption absolute inset-0 flex flex-col items-center justify-center text-white">
-        <h1 className="text-4xl font-bold mb-2">Puerto Madero Urubó</h1>
-        <h3 className="text-lg mb-4">Urbanización Ecológica</h3>
-        
-        {/* Separator */}
-        <div className="separator flex items-center mb-4">
-          <div className="line line-left h-px bg-white w-16"></div>
-          <div className="anchor mx-2"><i className="fas fa-anchor"></i></div>
-          <div className="line line-right h-px bg-white w-16"></div>
+      <div className="caption absolute top-1/2 transform -translate-y-1/2 text-center text-white z-20 w-full px-4">
+        <h1 className="text-5xl md:text-6xl font-bold uppercase text-shadow-lg opacity-0 animate-fadeIn">
+          Puerto Madero Urubó
+        </h1>
+        <h3 className="text-2xl md:text-3xl text-shadow-lg opacity-0 animate-fadeIn delay-500">
+          Urbanización Ecológica
+        </h3>
+        <div className="separator flex justify-center items-center my-4">
+          <div className="line w-32 h-1 bg-white opacity-0 animate-grow"></div>
+          <div className="anchor text-2xl mx-4 text-secondary opacity-0 animate-spin delay-700">
+            <i className="fas fa-anchor"></i>
+          </div>
+          <div className="line w-32 h-1 bg-white opacity-0 animate-grow"></div>
         </div>
-        
-        {/* Button */}
         <a
           id="homeBtn"
+          className="btn btn-lg px-8 py-3 bg-blue-900 hover:bg-blue-800 text-white uppercase rounded-full shadow-lg transition-transform transform hover:scale-105 opacity-0 animate-fadeIn delay-1000"
           href="#Promoción"
-          className="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           ¡Obtener Promoción!
         </a>
@@ -42,4 +43,4 @@ const HomeSection = () => {
   );
 };
 
-export default HomeSection;
+export default HeroSection;
