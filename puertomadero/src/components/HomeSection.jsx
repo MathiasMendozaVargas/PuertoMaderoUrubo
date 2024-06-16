@@ -1,5 +1,30 @@
-// HeroSection.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.5,
+      delayChildren: 0.5,
+    },
+  },
+};
+
+const grow = {
+  hidden: { width: 0 },
+  visible: { width: '8rem', transition: { duration: 1, ease: 'easeInOut' } }
+};
+
+const spin = {
+  hidden: { rotate: 0, opacity: 0 },
+  visible: { rotate: 360, opacity: 1, transition: { duration: 1, ease: 'easeInOut' } }
+};
 
 const HeroSection = () => {
   return (
@@ -17,30 +42,46 @@ const HeroSection = () => {
         </video>
       </div>
 
-      <div className="caption absolute top-1/2 transform -translate-y-1/2 text-center text-white z-20 w-full px-4">
-        <h1 className="text-5xl md:text-6xl font-bold uppercase text-shadow-lg opacity-0 animate-fadeIn">
+      <motion.div 
+        className="caption absolute top-1/2 transform -translate-y-1/2 text-center text-white z-20 w-full px-4"
+        variants={staggerContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h1 className="text-5xl md:text-6xl font-bold uppercase text-shadow-lg"
+          variants={fadeIn}
+        >
           Puerto Madero Urubó
-        </h1>
-        <h3 className="text-2xl md:text-3xl text-shadow-lg opacity-0 animate-fadeIn delay-500">
+        </motion.h1>
+        <motion.h3 className="text-2xl md:text-3xl text-shadow-lg"
+          variants={fadeIn}
+          transition={{ delay: 0.5 }}
+        >
           Urbanización Ecológica
-        </h3>
-        <div className="separator flex justify-center items-center my-4">
-          <div className="line w-32 h-1 bg-white opacity-0 animate-grow"></div>
-          <div className="anchor text-2xl mx-4 text-secondary opacity-0 animate-spin delay-700">
+        </motion.h3>
+        <motion.div className="separator flex justify-center items-center my-4"
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div className="line w-32 h-1 bg-white" variants={grow}></motion.div>
+          <motion.div className="anchor text-2xl mx-4 text-secondary" variants={spin} transition={{ delay: 0.7 }}>
             <i className="fas fa-anchor"></i>
-          </div>
-          <div className="line w-32 h-1 bg-white opacity-0 animate-grow"></div>
-        </div>
-        <a
+          </motion.div>
+          <motion.div className="line w-32 h-1 bg-white" variants={grow}></motion.div>
+        </motion.div>
+        <motion.a
           id="homeBtn"
-          className="btn btn-lg px-8 py-3 bg-blue-900 hover:bg-blue-800 text-white uppercase rounded-full shadow-lg transition-transform transform hover:scale-105 opacity-0 animate-fadeIn delay-1000"
+          className="btn btn-lg px-8 py-3 bg-[#001540] hover:bg-[#192b94] text-white uppercase rounded-md shadow-lg transition-transform transform hover:scale-105"
           href="#Promoción"
+          variants={fadeIn}
+          transition={{ delay: 1 }}
         >
           ¡Obtener Promoción!
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </div>
   );
 };
 
 export default HeroSection;
+
