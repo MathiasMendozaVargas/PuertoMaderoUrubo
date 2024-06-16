@@ -1,6 +1,7 @@
 /* Navbar branding */
 .navbar-brand {
     display: flex;
+    background-color: #001540;
     align-items: center;
 }
 
@@ -82,7 +83,7 @@
 /* Mobile Menu */
 .mobile-menu {
     overflow: hidden; /* Ensure smooth height transition */
-    background-color: #1a202c; /* Same background color as navbar */
+    background-color: #001540; /* Same background color as navbar */
     z-index: 1000;
 }
 
