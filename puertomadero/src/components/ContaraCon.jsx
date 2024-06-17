@@ -16,19 +16,18 @@ const features = [
 
 const ContaraCon = () => {
   return (
-    <div id="ContaraCon" className="py-16 bg-gray-100">
+    <div id="ContaraCon" className="py-16 bg-gray-100 font-body">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <motion.h3
-            className="text-4xl font-extrabold text-gray-900"
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Contará con
-          </motion.h3>
+            <h3 className="text-4xl font-extrabold text-gray-900">Contará con</h3>
+          </motion.div>
           <motion.div
-            className="h-1 w-24 bg-blue-600 mx-auto mt-4"
+            className="h-1 w-24 bg-[#113085] mx-auto mt-4"
             initial={{ width: 0 }}
             animate={{ width: '6rem' }}
             transition={{ duration: 0.6 }}

@@ -5,6 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Vollkorn', 'sans-serif'],
+      'serif': ['Vollkorn', 'serif'],
+      // You can define additional font families here
+    },
     extend: {
       colors: {
         'secondary': '#021b4b',
