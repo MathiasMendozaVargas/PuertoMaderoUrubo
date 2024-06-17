@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { MdOutlineAnchor } from "react-icons/md";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } }
+  visible: { opacity: 1, y: 0, transition: { duration: .5 } }
 };
 
 const staggerContainer = {
@@ -36,7 +37,7 @@ const HeroSection = () => {
           loop
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
-          poster="./static/Sources/inicioHome.jpg"
+          poster="/Sources/inicioHome.jpg"
         >
           <source src="/Sources/animation1.mp4" type="video/mp4" />
         </video>
@@ -65,7 +66,7 @@ const HeroSection = () => {
         >
           <motion.div className="line w-32 h-1 bg-white" variants={grow}></motion.div>
           <motion.div className="anchor text-2xl mx-4 text-secondary" variants={spin} transition={{ delay: 0.7 }}>
-            <i className="fas fa-anchor"></i>
+            <MdOutlineAnchor color='white' />
           </motion.div>
           <motion.div className="line w-32 h-1 bg-white" variants={grow}></motion.div>
         </motion.div>
@@ -84,4 +85,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
