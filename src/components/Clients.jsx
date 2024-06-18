@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
+import { motion, useInView } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -66,31 +67,71 @@ const ClientsSection = () => {
   return (
     <div id="Clientes" className="offset">
       <div className="bg-gray-100 p-8">
-        <div className="text-center">
+        <div className="text-center pb-5">
           <h3 className="text-3xl font-bold">Clientes</h3>
           <div className="w-24 h-1 bg-blue-900 mx-auto my-4"></div>
         </div>
         <Slider {...settings}>
           {clients.map((client, index) => (
-            <div key={index} className="px-8 mb-8">
-              <div className="flex flex-col items-center">
-                <div className="w-24">
-                  <img src={client.imgSrc} alt="" className="w-full rounded-full shadow-lg" />
-                </div>
-                <div className="mt-4">
-                  <blockquote className="relative text-center">
-                    <i className="fas fa-quote-left text-blue-900 absolute top-0 left-0 transform -translate-x-6 -translate-y-2"></i>
-                    <p className="ml-8">{client.quote}</p>
-                    <hr className="border-t border-blue-900 my-4" />
-                    <cite className="block text-sm">&#8212; {client.cite}</cite>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
+            <InViewClient key={index} client={client} delay={index * 0.1} />
           ))}
         </Slider>
       </div>
     </div>
+  );
+};
+
+const InViewClient = ({ client, delay }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const [delayedInView, setDelayedInView] = useState(false);
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => {
+        setDelayedInView(true);
+      }, 1000); // Delay before animation starts
+      return () => clearTimeout(timer);
+    }
+  }, [inView]);
+
+  useEffect(() => {
+    if (delayedInView) {
+      let charIndex = 0;
+      const typingInterval = setInterval(() => {
+        setDisplayedText(client.quote.slice(0, charIndex + 1));
+        charIndex += 1;
+        if (charIndex === client.quote.length) {
+          clearInterval(typingInterval);
+        }
+      }, 20); // Typing speed in ms
+      return () => clearInterval(typingInterval);
+    }
+  }, [delayedInView, client.quote]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={delayedInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay }}
+      className="px-4 mb-8"
+    >
+      <div className="flex flex-col items-center">
+        <div className="w-36">
+          <img src={client.imgSrc} alt="" className="w-full rounded-full shadow-lg" />
+        </div>
+        <div className="mt-4">
+          <blockquote className="relative text-center">
+            <i className="fas fa-quote-left text-blue-900 absolute top-0 left-0 transform -translate-x-6 -translate-y-2"></i>
+            <p className="ml-8">{displayedText}</p>
+            <hr className="border-t border-blue-900 my-4" />
+            <cite className="block text-sm">&#8212; {client.cite}</cite>
+          </blockquote>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
